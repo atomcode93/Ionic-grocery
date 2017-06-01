@@ -1,0 +1,53 @@
+page-date-time {
+    ion-navbar {
+        border-bottom: 1px solid #c8c7cc;
+        .back-button {
+            padding-left: 16px;
+        }
+        .toolbar-background {
+            background-color: color($colors, white);
+        }
+        .edit-address {
+            width: 12px;
+        }
+        .navbar-header {
+            margin-left: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin-right: 16px;
+            margin-bottom: 4px;
+            align-items: center;
+        }
+        .header-address {
+            &-label {
+                margin-bottom: 4px;
+            }
+            &-line {
+                color: color($colors, orange);
+                font-size: 1.7rem;
+            }
+        }
+    }
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 16px;
+        &-name {
+            display: flex;
+            align-items: center;
+            &-text {
+                margin-left: 16px;
+            }
+        }
+        &-item {
+            padding: 0;
+        }
+    }
+    #content {
+        background-color: color($colors, light);
+        .scroll-content {
+            padding-top: 0px;
+        }
+    }
+}
