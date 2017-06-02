@@ -79,7 +79,7 @@ page-date-time {
                     padding: 0 10px 0 5px;
                 }
                 &-pan {
-                    padding: 10px 25px;
+                    padding: 0 25px;
                     ion-label {
                         display: flex;
                         align-items: center;
@@ -116,8 +116,8 @@ page-date-time {
             }
             .time {
                 text-align: center;
-                border-radius: 15px;
-                padding: 5px 10px;
+                border-radius: 10px;
+                padding: 2px 10px;
                 span {
                     color: white;
                     font-size: 12px;
@@ -143,12 +143,15 @@ page-date-time {
                 align-items: center;
                 justify-content: space-between;
             }
+            ion-avatar {
+                margin-left: 10px;
+            }
         }
     }
     ion-footer {
         .cart-btn {
             display: flex;
-            padding: 20px 30px;
+            padding: 10px 30px;
             div {
                 padding-top: 6px;
             }
@@ -159,7 +162,7 @@ page-date-time {
             }
         }
         .proceed-btn {
-            padding: 20px 30px;
+            padding: 10px 30px;
             display: flex;
             align-items: center;
             justify-content: space-between;
