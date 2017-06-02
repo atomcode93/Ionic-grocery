@@ -28,7 +28,9 @@
     <ion-list *ngFor="let shopname of shops">
         <ion-item class="shop-title">
             <img src="assets/icon/Common/Shop.png" />
-            <span>{{shopname}}</span>
+            <div>
+                <span>{{shopname}}</span>
+            </div>
         </ion-item>
         <ion-item *ngFor="let item of getItems(shopname)">
             <span item-left class="image">

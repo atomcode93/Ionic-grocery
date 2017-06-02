@@ -49,6 +49,15 @@ page-cart {
         }
         .shop-title {
             margin: 2*$content-margin 0 $content-margin 0;
+            ion-label {
+                display: flex;
+                div {
+                    margin-top: 3px;
+                }
+            }
+            img {
+                margin-right: 15px;
+            }
         }
         ion-item {
             // margin: $content-margin;
