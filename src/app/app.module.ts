@@ -2,9 +2,9 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Calendar } from '@ionic-native/calendar';
 import { MyApp } from './app.component';
-// import { NgCalendarModule } from 'ionic2-calendar';
+
+import { CalendarModule } from 'ion2-calendar';
 
 // Pages
 import { HomePage } from '../pages/home/home';
@@ -43,8 +43,8 @@ import { UserService } from '../services/user-services';
   imports: [
     BrowserModule,
     SuperTabsModule,
-    // NgCalendarModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -65,7 +65,6 @@ import { UserService } from '../services/user-services';
     StatusBar,
     SplashScreen,
     Geolocation,
-    Calendar,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     UserService
   ]

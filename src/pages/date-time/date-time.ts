@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Navbar } from 'ionic-angular';
 
-import { Calendar } from '@ionic-native/calendar';
+import { CalendarController } from 'ion2-calendar/dist';
 /*
   Generated class for the DateTime page.
 
@@ -24,7 +24,7 @@ export class DateTimePage {
 
   startDate = new Date();
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private calendar: Calendar) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, public calendarCtrl: CalendarController) {}
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad DateTimePage');
@@ -49,7 +49,21 @@ export class DateTimePage {
     this.time[num] = true;
   }
   openCalendar(){
-    // this.calendar.openCalendar(this.startDate);
+    this.calendarCtrl.openCalendar({
+      from: new Date(),
+      weekdaysTitle: "Sun_Mon_Tue_Wed_Thu_Fri_Sat".split("_"),
+      daysConfig: [
+        {
+          date: this.startDate,
+          marked: true
+        }
+      ]
+      // closeLabel: ''
+    })
+    .then(res => { 
+      this.startDate.setTime(res.date.time);
+     })
+    .catch(() => {});
   }
 
 }

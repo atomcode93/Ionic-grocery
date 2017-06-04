@@ -36,31 +36,32 @@ export class LoginPage {
 
   login() {
     // add your check auth here
-    this.navCtrl.setRoot(HomePage);
+    //this.navCtrl.setRoot(HomePage);
 
-    // if (this.loginData.email == ''){
-    //     this.presentToast('Please Input Email');
-    //     return;
-    // }
-    // if (!this.EMAIL_REGEXP.test(this.loginData.email)) {
-    //     this.presentToast('Email is Invalid');
-    //     return;
-    // }
-    // if (this.loginData.password == ''){
-    //     this.presentToast('Please Input Password');
-    //     return;
-    // }
+    if (this.loginData.email == ''){
+        this.presentToast('Please Input Email');
+        return;
+    }
+    if (!this.EMAIL_REGEXP.test(this.loginData.email)) {
+        this.presentToast('Email is Invalid');
+        return;
+    }
+    if (this.loginData.password == ''){
+        this.presentToast('Please Input Password');
+        return;
+    }
 
-    // this.showLoader();
-    // this.userService.login(this.loginData).then((result) => {
-    //     this.loading.dismiss();
-    //     this.data = result;
-    //     localStorage.setItem('token', this.data.access_token);
-    //     this.navCtrl.setRoot(HomePage);
-    // }, (err) => {
-    //     this.loading.dismiss();
-    //     this.presentToast(err);
-    // });
+    this.showLoader();
+    this.userService.login(this.loginData).then((result) => {
+        this.loading.dismiss();
+        this.data = result;
+        console.log(result);
+        //localStorage.setItem('token', this.data.access_token);
+        this.navCtrl.setRoot(HomePage);
+    }, (err) => {
+        this.loading.dismiss();
+        this.presentToast(err);
+    });
   }
 
   showLoader(){

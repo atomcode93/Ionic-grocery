@@ -21,6 +21,7 @@ export class UserService {
 
             this.http.post(userURL + '/login', JSON.stringify(credentials), {headers: headers})
             .subscribe(res => {
+                console.log(res.headers);
                 resolve(res);
             }, (err) => {
                 reject(err);
