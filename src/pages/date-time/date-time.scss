@@ -161,6 +161,9 @@ page-date-time {
                 margin-left: 20px;
             }
         }
+        .cart-btn:hover {
+            background-color: color($colors, grey);
+        }
         .proceed-btn {
             padding: 10px 30px;
             display: flex;
@@ -176,6 +179,9 @@ page-date-time {
                     margin-right: 10px;
                 }
             }
+        }
+        .proceed-btn::hover {
+            background-color: color($colors, orange);
         }
     }
 }

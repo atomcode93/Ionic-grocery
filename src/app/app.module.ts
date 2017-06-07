@@ -21,6 +21,7 @@ import { CartPage } from '../pages/cart/cart';
 import { LoginPage } from '../pages/login/login';
 import { RegisterPage } from '../pages/register/register';
 import { DateTimePage } from '../pages/date-time/date-time';
+import { OrderItemsPage } from '../pages/order-items/order-items';
 
 // Services
 import { UserService } from '../services/user-services';
@@ -38,7 +39,8 @@ import { UserService } from '../services/user-services';
     RegisterPage,
     ProductDetailsPage,
     CartPage,
-    DateTimePage
+    DateTimePage,
+    OrderItemsPage
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,8 @@ import { UserService } from '../services/user-services';
     RegisterPage,
     ProductDetailsPage,
     CartPage,
-    DateTimePage
+    DateTimePage,
+    OrderItemsPage
   ],
   providers: [
     StatusBar,

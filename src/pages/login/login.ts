@@ -55,7 +55,9 @@ export class LoginPage {
     this.userService.login(this.loginData).then((result) => {
         this.loading.dismiss();
         this.data = result;
-        console.log(result);
+        console.log(this.data.headers.get('x-auth'));
+        this.presentToast(this.data.headers.get('x-auth'));
+        // console.log(result);
         //localStorage.setItem('token', this.data.access_token);
         this.navCtrl.setRoot(HomePage);
     }, (err) => {

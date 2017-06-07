@@ -13,15 +13,12 @@ export class UserService {
     constructor(public http: Http){}
 
     login(credentials){
-        console.log(JSON.stringify(credentials));
-        console.log(userURL);
         return new Promise((resolve, reject) => {
             let headers = new Headers();
             headers.append('Content-Type', 'application/json');
 
             this.http.post(userURL + '/login', JSON.stringify(credentials), {headers: headers})
             .subscribe(res => {
-                console.log(res.headers);
                 resolve(res);
             }, (err) => {
                 reject(err);
@@ -43,4 +40,5 @@ export class UserService {
             });
         });
     }
+
 }

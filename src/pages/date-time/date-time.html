@@ -149,13 +149,13 @@
 </ion-content>
 
 <ion-footer>
-    <div class="cart-btn">
+    <div class="cart-btn" (click)="gotoOrderItems()">
         <img src="assets/icon/Common/Footer Cart.png" />
         <div>
             <span>Review Cart</span>
         </div>
     </div>
-    <div class="proceed-btn">
+    <div class="proceed-btn" (click)="gotoOrderSummany()">
         <span>Proceed to checkout</span>
         <div class="proceed-btn-right-item">
             <div>

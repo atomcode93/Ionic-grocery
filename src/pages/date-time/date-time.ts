@@ -1,7 +1,8 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController, NavParams, Navbar } from 'ionic-angular';
-
 import { CalendarController } from 'ion2-calendar/dist';
+
+import { OrderItemsPage } from '../order-items/order-items';
 /*
   Generated class for the DateTime page.
 
@@ -66,4 +67,11 @@ export class DateTimePage {
     .catch(() => {});
   }
 
+  gotoOrderItems(){
+      this.navCtrl.push(OrderItemsPage);
+  }
+
+  gotoOrderSummany(){
+
+  }
 }
